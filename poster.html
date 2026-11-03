@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Embodied AI and Robotics Workshop at the University of Galway, 4 December 2026. Robotics, Automation and Modelling for Environmental and Sustainable Systems.">
+  <meta name="theme-color" content="#a80050">
+  <title>Embodied AI &amp; Robotics Workshop — Poster</title>
+  <style>
+    :root {
+      --maroon: #a80050;
+      --deep-maroon: #84003d;
+      --ink: #282329;
+      --muted: #71696c;
+      --paper: #faf8f5;
+      --line: #e8e2e1;
+    }
+
+    @page { size: A3 portrait; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: #e9e5e3; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    a { color: inherit; }
+    .poster {
+      display: grid;
+      grid-template-rows: 20mm 98mm 23mm 1fr 70mm;
+      width: 297mm;
+      height: 420mm;
+      margin: 12px auto;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 3px 28px #0002;
+    }
+    .masthead { display: flex; align-items: center; justify-content: space-between; padding: 2mm 13mm; }
+    .logo { width: 67mm; height: auto; }
+    .organisers { text-align: right; color: var(--deep-maroon); font-size: 8pt; font-weight: 700; line-height: 1.55; letter-spacing: .09em; text-transform: uppercase; }
+    .organisers span { color: var(--muted); font-weight: 400; }
+    .hero { display: grid; grid-template-columns: 1.55fr .65fr; gap: 2mm; min-height: 0; background: var(--deep-maroon); }
+    .hero-main, .hero-robot { position: relative; min-width: 0; overflow: hidden; }
+    .hero-main img, .hero-robot img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-main img { object-position: center 52%; }
+    .hero-main::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, #65002fde 0%, #760038bd 45%, #76003840 100%); }
+    .hero-copy { position: absolute; z-index: 1; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 8mm 11mm 8mm 14mm; color: #fff; }
+    .eyebrow { margin: 0 0 4mm; color: #ffe4ef; font-size: 8pt; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
+    h1 { max-width: 165mm; margin: 0; font: 500 41pt/.99 Georgia, "Times New Roman", serif; letter-spacing: -.035em; }
+    h1 em { color: #f4c8db; font-weight: 400; }
+    .hero-subtitle { margin: 5mm 0 0; font: italic 15pt/1.3 Georgia, "Times New Roman", serif; color: #fff; }
+    .hero-support { margin: 4mm 0 0; font-size: 9pt; line-height: 1.45; color: #ffecf4; }
+    .hero-robot img { object-position: 54% center; }
+    .event-meta { display: grid; grid-template-columns: 1fr 1fr 1.35fr; align-items: center; padding: 3mm 14mm; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .meta-item { padding: 0 6mm; border-left: 1px solid var(--line); }
+    .meta-item:first-child { padding-left: 0; border-left: 0; }
+    .meta-label { margin: 0 0 1mm; color: var(--maroon); font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .meta-value { margin: 0; font: 500 12pt/1.25 Georgia, "Times New Roman", serif; }
+    .meta-sub { margin: 1mm 0 0; color: var(--muted); font-size: 8pt; }
+    .content { display: grid; grid-template-columns: minmax(0, 1.36fr) minmax(0, .74fr); gap: 8mm; min-height: 0; padding: 7mm 13mm 5mm; }
+    .intro { padding-bottom: 4mm; border-bottom: 1px solid var(--line); }
+    .section-label { margin: 0 0 2mm; color: var(--maroon); font-size: 7pt; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+    h2 { margin: 0; font: 500 22pt/1.06 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+    .intro-copy { max-width: 165mm; margin: 2.5mm 0 0; color: #514a4d; font-size: 9pt; line-height: 1.5; }
+    .programme { margin-top: 4mm; }
+    .programme-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 5mm; margin-bottom: 2mm; }
+    .programme-heading h3, .sidebar h3 { margin: 0; font: 500 16pt/1.1 Georgia, "Times New Roman", serif; }
+    .programme-heading > span { color: var(--muted); font-size: 8pt; }
+    .schedule { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .schedule tr { border-top: 1px solid var(--line); }
+    .schedule th, .schedule td { padding: 1.5mm 1mm; text-align: left; vertical-align: top; }
+    .schedule th { width: 22mm; padding-left: 0; white-space: nowrap; color: var(--deep-maroon); font-size: 8.5pt; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .schedule td { font-size: 8.5pt; line-height: 1.3; }
+    .schedule td strong { font-size: 9pt; font-weight: 700; }
+    .schedule td span { display: block; margin-top: .5mm; color: var(--muted); font-size: 8pt; }
+    .sidebar { display: flex; flex-direction: column; gap: 5mm; }
+    .keynotes { padding: 4mm; background: var(--paper); border-top: 1.1mm solid var(--maroon); }
+    .keynotes h3 { margin-bottom: 3mm; }
+    .keynote { padding: 2.5mm 0; border-top: 1px solid var(--line); }
+    .keynote:first-of-type { border-top: 0; padding-top: 0; }
+    .keynote-label { margin: 0 0 .7mm; color: var(--maroon); font-size: 6.5pt; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .keynote-title { margin: 0; font: 500 10pt/1.25 Georgia, "Times New Roman", serif; }
+    .keynote-speaker { margin: 1mm 0 0; color: var(--muted); font-size: 7.5pt; line-height: 1.35; }
+    .topics { padding: 4mm; background: #f7eff3; }
+    .topics h3 { margin-bottom: 2mm; }
+    .topics p { margin: 0; color: #544a4f; font-size: 8pt; line-height: 1.55; }
+    .topics strong { color: var(--deep-maroon); }
+    .support { margin-top: 4mm; padding-top: 3mm; border-top: 1px solid var(--line); color: var(--muted); font-size: 9pt; line-height: 1.5; }
+    .support strong { color: var(--ink); }
+    .registration { display: grid; grid-template-columns: 1fr 64mm; align-items: center; gap: 8mm; padding: 4mm 13mm; background: var(--deep-maroon); color: #fff; }
+    .registration .section-label { color: #fff; }
+    .school-logo { display: block; width: 82mm; height: auto; margin: 0 0 3mm; }
+    .registration h2 { color: #fff; font-size: 24pt; }
+    .registration-copy { margin: 2mm 0 0; color: #ffe4ef; font-size: 9pt; line-height: 1.4; }
+    .registration-link { display: inline-block; margin-top: 2.5mm; color: #fff; font-size: 8pt; font-weight: 700; text-underline-offset: 2px; }
+    .registration-qr { display: block; width: 60mm; height: 60mm; object-fit: contain; padding: 1mm; background: white; }
+    .registration-caption { margin: 1mm 0 0; text-align: center; color: #ffe4ef; font-size: 6.5pt; }
+    @media screen {
+      .poster { min-height: 420mm; }
+    }
+    @media print {
+      html, body { width: 297mm; height: 420mm; background: white; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .poster { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" aria-label="Embodied AI and Robotics Workshop poster">
+    <header class="masthead">
+      <img class="logo" src="images_marketing/university-of-galway-logo-provided.png" alt="University of Galway">
+      <p class="organisers">Ryan Institute &amp; School of Computer Science<br><span>University of Galway</span></p>
+    </header>
+
+    <section class="hero" aria-labelledby="poster-title">
+      <div class="hero-main">
+        <img src="images_marketing/IMG_9777.jpg" alt="University of Galway robotics group with humanoid and quadruped robots">
+        <div class="hero-copy">
+          <p class="eyebrow">One-day research workshop · Galway · 2026</p>
+          <h1 id="poster-title">Embodied AI<br>&amp; <em>Robotics</em></h1>
+          <p class="hero-subtitle">Intelligence in action. Innovation for a sustainable future.</p>
+          <p class="hero-support">Robotics, Automation and Modelling for Environmental and Sustainable Systems</p>
+        </div>
+      </div>
+      <div class="hero-robot">
+        <img src="images_marketing/robot9.jpg" alt="UR5 collaborative robotic arm on a mobile robot platform">
+      </div>
+    </section>
+
+    <section class="event-meta" aria-label="Workshop date, time and venue">
+      <div class="meta-item"><p class="meta-label">Date</p><p class="meta-value"><time datetime="2026-12-04">Friday, 4 December 2026</time></p></div>
+      <div class="meta-item"><p class="meta-label">Time</p><p class="meta-value">09:00–17:00</p><p class="meta-sub">All times GMT</p></div>
+      <div class="meta-item"><p class="meta-label">Venue</p><p class="meta-value">Engineering Building · ENG-3035</p><p class="meta-sub">University of Galway · Ireland</p></div>
+    </section>
+
+    <section class="content">
+      <div class="main-column">
+        <div class="intro">
+          <p class="section-label">Ideas into impact</p>
+          <h2>Where AI meets the physical world.</h2>
+          <p class="intro-copy">A day of talks, keynotes and live demonstrations for everyone interested in robotics and embodied AI. Meet researchers and practitioners exploring how intelligent robotic systems can support environmental research, sustainable manufacturing and a better-connected future.</p>
+        </div>
+
+        <section class="programme" aria-labelledby="programme-title">
+          <div class="programme-heading"><h3 id="programme-title">Programme at a glance</h3><span>Friday · 4 December</span></div>
+          <table class="schedule">
+            <tbody>
+              <tr><th>09:00</th><td><strong>Arrival &amp; registration</strong></td></tr>
+              <tr><th>09:30</th><td><strong>Welcome &amp; opening remarks</strong><span>Prof. Frances Fahy · Ryan Institute, University of Galway</span></td></tr>
+              <tr><th>09:45</th><td><strong>Sensing and perception in mass-production autonomous systems</strong><span>Dr. Brian Deegan · University of Galway</span></td></tr>
+              <tr><th>10:15</th><td><strong>Keynote · Heterogeneous Marine Robotics: UAV, ASV and ROV Systems</strong><span>Dr. Gerard Dooly · University of Limerick</span></td></tr>
+              <tr><th>11:00</th><td><strong>Coffee break &amp; poster presentation</strong></td></tr>
+              <tr><th>11:30</th><td><strong>Keynote · Perception and machine learning for real-world robot deployment</strong><span>Dr. Philip Long · Atlantic Technological University</span></td></tr>
+              <tr><th>12:15</th><td><strong>Autonomous material replenishment &amp; digital twins for sustainable manufacturing</strong><span>Padraig Conneely · University of Galway</span></td></tr>
+              <tr><th>12:45</th><td><strong>Live demonstration · Quadruped and humanoid robotics</strong><span>Dr. Waqar Shahid Qureshi · University of Galway</span></td></tr>
+              <tr><th>13:30–14:45</th><td><strong>Break · Lunch &amp; poster presentation</strong></td></tr>
+              <tr><th>14:45</th><td><strong>Keynote · AI, Robotics, and Compliance: The EU AI Act and CE Marking</strong><span>Dr. Julio Zanon</span></td></tr>
+              <tr><th>15:30</th><td><strong>Research funding landscape in Ireland: opportunities for collaboration</strong><span>Research Office · University of Galway</span></td></tr>
+              <tr><th>16:30</th><td><strong>Networking, coffee &amp; collaboration</strong></td></tr>
+            </tbody>
+          </table>
+        </section>
+        <p class="support">Organised by the <strong>Ryan Institute</strong>, and the <strong>School of Computer Science</strong> at the University of Galway.<br><br>Supported by the NUI Grant Scheme for Early Career Academics 2026.</p>
+      </div>
+
+      <aside class="sidebar" aria-label="Workshop themes and featured keynotes">
+        <section class="keynotes">
+          <p class="section-label">Featured talks</p>
+          <div class="keynote"><p class="keynote-label">09:45 · Talk</p><p class="keynote-title">Sensing and perception in mass-production autonomous systems</p><p class="keynote-speaker">Dr. Brian Deegan<br>University of Galway</p></div>
+          <div class="keynote"><p class="keynote-label">10:15 · Keynote 1</p><p class="keynote-title">Heterogeneous Marine Robotics: UAV, ASV and ROV Systems</p><p class="keynote-speaker">Dr. Gerard Dooly<br>University of Limerick</p></div>
+          <div class="keynote"><p class="keynote-label">11:30 · Keynote 2</p><p class="keynote-title">Leveraging Perception and Machine Learning to Facilitate Real-World Robot Deployment</p><p class="keynote-speaker">Dr. Philip Long<br>Atlantic Technological University</p></div>
+          <div class="keynote"><p class="keynote-label">12:45 · Live demo</p><p class="keynote-title">Quadruped and Humanoid Robotics Demonstration</p><p class="keynote-speaker">Dr. Waqar Shahid Qureshi<br>University of Galway</p></div>
+          <div class="keynote"><p class="keynote-label">15:30 · Research talk</p><p class="keynote-title">Research funding landscape in Ireland: opportunities for collaboration</p><p class="keynote-speaker">Research Office<br>University of Galway</p></div>
+        </section>
+        <section class="topics">
+          <p class="section-label">Why join us</p>
+          <h3>Connect across disciplines.</h3>
+          <p>Explore <strong>embodied intelligence</strong>, autonomous systems, marine robotics, environmental applications, sustainability, sustainable manufacturing and responsible AI.</p>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="registration">
+      <div>
+        <img class="school-logo" src="images_marketing/university-logoN.png" alt="University of Galway School of Computer Science">
+        <h2>Join us in Galway.</h2>
+        <p class="registration-copy">Scan to register for the Embodied AI &amp; Robotics Workshop.</p>
+        <a class="registration-link" href="https://forms.cloud.microsoft/e/hM4VgCTeXN">Register online · forms.cloud.microsoft/e/hM4VgCTeXN</a>
+      </div>
+      <div>
+        <a href="https://forms.cloud.microsoft/e/hM4VgCTeXN" aria-label="Scan this QR code to register for the workshop">
+          <img class="registration-qr" src="images_marketing/QRCode%20for%20Embodied%20AI_%26%20Robotics_Registration.png" alt="Registration QR code">
+        </a>
+        <p class="registration-caption">Scan to open the registration form</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
