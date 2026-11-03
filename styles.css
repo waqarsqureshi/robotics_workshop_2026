@@ -65,9 +65,9 @@ h1 em { font-weight: 400; color: #f4c8db; }
 .details-grid { display: grid; grid-template-columns: 1.05fr .85fr 1.2fr; padding-block: 29px; }
 .detail { display: flex; gap: 16px; padding-right: 20px; }
 .detail + .detail { border-left: 1px solid var(--line); padding-left: 30px; }
-.detail-number { color: var(--maroon); font: italic 20px var(--serif); padding-top: 3px; }
-.detail-label { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .13em; margin-bottom: 4px; }
-.detail p:not(.detail-label) { font-size: 12px; font-weight: 500; }
+.detail-label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .13em; margin-bottom: 7px; }
+.detail p:not(.detail-label) { font-size: 18px; font-weight: 500; }
+.detail .muted { font-size: 14px; }
 .muted { color: var(--muted); font-size: 10px; font-weight: 400; }
 .section { padding-block: 78px; }
 h2 { font: 400 clamp(32px, 3.2vw, 43px)/1.15 var(--serif); letter-spacing: -.035em; }
@@ -166,7 +166,6 @@ footer a span { padding-left: 12px; }
   .about-grid, .organisers-grid { gap: 35px; }
   .detail + .detail { padding-left: 18px; }
   .detail { gap: 9px; padding-right: 12px; }
-  .detail p:not(.detail-label) { font-size: 11px; }
   .venue-grid { gap: 45px; }
   .schedule tbody td, .schedule tbody th { padding-inline: 16px; }
 }
@@ -193,7 +192,6 @@ footer a span { padding-left: 12px; }
   .details-grid { grid-template-columns: 1fr; gap: 18px; padding-block: 25px; }
   .detail { gap: 16px; }
   .detail + .detail { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; }
-  .detail p:not(.detail-label) { font-size: 13px; }
   .section { padding-block: 50px; }
   .about-grid, .organisers-grid, .venue-grid, .registration-grid { grid-template-columns: 1fr; gap: 28px; }
   .eyebrow { font-size: 9px; margin-bottom: 14px; }
