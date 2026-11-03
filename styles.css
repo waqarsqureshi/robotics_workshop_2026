@@ -26,7 +26,7 @@ h1, h2, h3, p, figure { margin: 0; }
 .top-bar .container { display: flex; justify-content: space-between; padding-block: 8px; }
 .site-header { background: white; }
 .header-inner { min-height: 113px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-.university-logo img { width: 224px; height: auto; }
+.ryan-institute-logo img { width: 224px; height: auto; }
 nav { display: flex; gap: 33px; align-items: center; }
 nav a { font-size: 13px; font-weight: 500; text-decoration: none; }
 nav .nav-venue { color: var(--maroon); border-left: 1px solid var(--line); padding-left: 30px; }
@@ -51,8 +51,6 @@ h1 em { font-weight: 400; color: #f4c8db; }
 .hero-organisers { margin-top: 34px; padding-top: 21px; border-top: 1px solid #ffffff40; }
 .hero-organisers > span { display: block; font-size: 9px; text-transform: uppercase; letter-spacing: .13em; color: #ffdeec; margin-bottom: 6px; }
 .hero-organisers p { font-size: 12px; }
-.hero-organisers p span { padding-inline: 8px; color: #f4c8db; }
-.mobile-break { display: none; }
 .hero-visual { position: relative; align-self: stretch; margin-block: 4px 10px; }
 .hero-photo { height: 100%; width: 100%; min-height: 390px; object-fit: contain; object-position: 43% center; background: var(--deep-maroon); }
 .hero-visual::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid #ffffff45; pointer-events: none; }
@@ -163,8 +161,6 @@ footer a span { padding-left: 12px; }
   .hero-grid { gap: 30px; }
   .hero-photo { min-height: 450px; }
   .hero-organisers p { font-size: 11px; }
-  .mobile-break { display: block; }
-  .hero-organisers p span { padding-right: 0; }
   .about-grid, .organisers-grid { gap: 35px; }
   .detail + .detail { padding-left: 18px; }
   .detail { gap: 9px; padding-right: 12px; }
@@ -176,7 +172,7 @@ footer a span { padding-left: 12px; }
   .container { width: calc(100% - 40px); }
   .top-bar .container > span:last-child { display: none; }
   .header-inner { flex-direction: column; align-items: flex-start; gap: 17px; padding-block: 19px 16px; }
-  .university-logo img { width: 185px; }
+  .ryan-institute-logo img { width: 185px; }
   nav { width: 100%; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   nav a { font-size: 12px; }
   nav .nav-venue { padding-left: 17px; }
@@ -186,7 +182,6 @@ footer a span { padding-left: 12px; }
   .hero-intro { max-width: 100%; }
   .hero-organisers { margin-top: 26px; }
   .hero-organisers p { font-size: 12px; }
-  .mobile-break { display: none; }
   .hero-visual { margin-right: 10px; }
   .hero-photo { height: 325px; min-height: 0; object-position: 43% 55%; }
   .hero-bottom { font-size: 7px; letter-spacing: .09em; }
@@ -237,7 +232,7 @@ footer a span { padding-left: 12px; }
   .container { width: 100%; }
   .top-bar, nav, .hero-visual, .hero-bottom, .hero-actions, .robotics, footer, .skip-link { display: none; }
   .header-inner { min-height: 0; margin-bottom: 16px; }
-  .university-logo img { width: 170px; }
+  .ryan-institute-logo img { width: 170px; }
   .hero, .venue-section, .programme, .event-details { background: white; color: black; }
   .hero-grid { display: block; min-height: 0; padding: 0 0 20px; }
   h1 { font-size: 36pt; }
